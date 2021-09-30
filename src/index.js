@@ -1,18 +1,20 @@
 import './sass/main.scss';
-
 import menu from './templates/gallery-items.hbs';
-
 import menuItems from './menu.json';
 
+console.log(menuItems);
+
 const placeForMenuItems = document.querySelector("ul[class='menu js-menu']");
-placeForMenuItems.insertAdjacentHTML('beforeend', createMenuItems(menuItems));
+
 function createMenuItems(menuItems) {
   return menu(menuItems);
 }
 
+placeForMenuItems.insertAdjacentHTML('beforeend', createMenuItems(menuItems));
+
 const buttonOfTheme = document.querySelector('#theme-switch-toggle');
 buttonOfTheme.addEventListener('change', switchTheme);
-// const saveThemeAfterReload = {};
+
 function switchTheme(e) {
   const Theme = {
     LIGHT: 'light-theme',
