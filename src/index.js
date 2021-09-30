@@ -4,7 +4,7 @@ import menuItems from './menu.json';
 
 console.log(menuItems);
 
-const placeForMenuItems = document.querySelector("ul[class='menu js-menu']");
+const placeForMenuItems = document.querySelector('.js-menu');
 
 function createMenuItems(menuItems) {
   return menu(menuItems);
