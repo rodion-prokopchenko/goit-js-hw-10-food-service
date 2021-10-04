@@ -34,5 +34,12 @@ function switchTheme(e) {
   let currentTheme = document.body.className;
   localStorage.setItem('theme', currentTheme);
 }
-console.log(buttonOfTheme);
+
 document.body.classList.add(localStorage.getItem('theme'));
+
+const themeChecked = () => {
+  if (localStorage.getItem('theme') === 'dark-theme') {
+    buttonOfTheme.setAttribute('checked', true);
+  }
+};
+themeChecked();
